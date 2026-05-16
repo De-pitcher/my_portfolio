@@ -1,4 +1,4 @@
-export const SITE_CONFIG = {
+export const siteConfig = {
   name: "Noel",
   title: "Noel - Full-Stack Developer",
   description:
