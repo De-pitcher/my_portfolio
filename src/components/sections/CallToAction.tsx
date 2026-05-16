@@ -22,10 +22,10 @@ export function CallToAction() {
         transition={{ duration: 0.6 }}
       >
         <h2 className="text-3xl md:text-5xl font-bold mb-6">
-          Let's Build Something Amazing Together
+          Let&apos;s Build Something Amazing Together
         </h2>
         <p className="text-xl text-foreground/60 mb-8">
-          Available for freelance projects and consulting. Let's discuss how I can help bring your
+          Available for freelance projects and consulting. Let&apos;s discuss how I can help bring your
           ideas to life.
         </p>
 

@@ -24,7 +24,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Hi, I'm Noel{" "}
+            Hi, I&apos;m Noel{" "}
             <motion.span
               className="inline-block"
               animate={{ rotate: [0, 14, -8, 14, 0] }}

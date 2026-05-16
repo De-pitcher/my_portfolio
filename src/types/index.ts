@@ -39,6 +39,6 @@ export interface Service {
 export interface Skill {
   name: string;
   icon?: string;
-  category: "frontend" | "backend" | "mobile" | "database" | "tools" | "other";
-  proficiency?: number;
+  category: string;
+  level: "expert" | "advanced" | "intermediate" | "beginner";
 }
