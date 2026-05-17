@@ -235,7 +235,7 @@ export const projects: Project[] = [
       { name: "Node.js", category: "backend" },
       { name: "Ollama", category: "other" },
       { name: "Commander.js", category: "other" },
-      { name: "Git", category: "tools" },
+      { name: "Git", category: "devops" },
     ],
     features: [
       "100% local AI processing with Ollama",
