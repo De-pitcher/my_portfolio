@@ -7,6 +7,73 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-05-17
+
+### Added - Phase 5: Projects Page & Individual Project Pages ✅
+
+#### Projects Grid Page (`/projects`)
+- Full projects listing with responsive grid (1, 2, 3 columns)
+- Category filtering:
+  - All Projects (count: 11+)
+  - Web (count: 5)
+  - Mobile (count: 4)
+  - Backend (count: 3)
+  - IoT (count: 2)
+  - AI/ML (count: 3)
+  - Fullstack (count: 2)
+- NDA project filtering toggle
+- Dynamic project count display
+- Stats section showing:
+  - Total projects delivered (11+)
+  - Enterprise solutions (7)
+  - Project categories (6)
+- Mobile responsiveness with proper spacing
+
+#### ProjectCard Component
+- Project thumbnail placeholder
+- Title, tagline, and description preview
+- Category badges with variants
+- NDA protection badge
+- Tech stack preview (first 3 + overflow)
+- "View Details" CTA button
+- Hover animations with Framer Motion
+- Responsive design
+
+#### Individual Project Pages (`/projects/[slug]`)
+- Server-side rendered with static generation
+- Project breadcrumb navigation
+- Hero section with:
+  - Category badges
+  - NDA status
+  - Title and tagline
+  - Action buttons (Visit Project, View Code)
+- Content sections:
+  - Overview (description)
+  - Key Features (bullet list)
+  - Outcomes & Impact (bullet list)
+- Sidebar with:
+  - Complete tech stack
+  - Project tags
+  - Quick info (categories, status)
+- Project navigation (prev/next links)
+- All 11+ projects pre-generated as static HTML
+
+#### ProjectDetailClient Component
+- Handles all client-side animations and interactivity
+- Proper server/client boundary for `generateStaticParams`
+- Three exportable components for code organization
+
+#### Routing & Performance
+- Dynamic routing with `[slug]` parameter
+- Static generation with `generateStaticParams()`
+- All routes pre-rendered at build time
+- Fast page loads (zero JavaScript for content)
+- Proper SEO with canonical URLs
+
+### Fixed
+- Server/client boundary issue with generateStaticParams
+- Type safety for category filtering
+
 ## [0.4.0] - 2026-05-17
 
 ### Added - Phase 4: Projects Data & Structure ✅
