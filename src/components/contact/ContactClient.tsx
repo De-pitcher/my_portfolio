@@ -77,18 +77,15 @@ export function ContactForm() {
     setSubmitStatus("idle");
 
     try {
-      // Simulate API call - in production, this would send to an email service
-      // For now, we'll just log to console and show success
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      console.log("Form submitted:", data);
-      
-      // In production, you'd send to an API endpoint like:
-      // const response = await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
       
       setSubmitStatus("success");
       reset();
