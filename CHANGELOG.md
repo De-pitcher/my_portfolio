@@ -7,6 +7,117 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-05-17
+
+### Added - Phase 8: SEO & Performance Optimization ✅
+
+#### Dynamic Sitemap (`sitemap.xml`)
+- Auto-generated sitemap using Next.js MetadataRoute.Sitemap
+- Includes all static pages:
+  - Homepage (priority 1.0, weekly changes)
+  - About page (priority 0.8, monthly changes)
+  - Projects page (priority 0.9, weekly changes)
+  - Services page (priority 0.8, monthly changes)
+  - Contact page (priority 0.7, monthly changes)
+- Includes all dynamic project pages (11+ projects)
+  - Each project with priority 0.6, monthly changes
+- Last modified timestamps for all pages
+- Accessible at `/sitemap.xml`
+
+#### Robots.txt (`robots.txt`)
+- Allow all pages for search engine crawlers
+- Disallow API routes
+- Sitemap reference pointing to `/sitemap.xml`
+- Generated dynamically with Next.js MetadataRoute.Robots
+- Accessible at `/robots.txt`
+
+#### Enhanced Root Metadata (Root Layout)
+- **metadataBase**: Proper URL resolution for all metadata
+- **Title template**: `%s | Noel` for consistent page titles
+- **Enhanced Open Graph**:
+  - Type: website
+  - Locale: en_US
+  - Site name
+  - URL, title, description
+- **Twitter Card support**:
+  - Card type: summary_large_image
+  - Title, description, creator
+- **Robot directives**:
+  - Index and follow enabled
+  - Google Bot specific settings
+  - Max video/image preview settings
+  - Max snippet length settings
+
+#### Page-Specific Open Graph Metadata
+- **Homepage**:
+  - Type: website
+  - Complete Open Graph with URL and description
+- **About Page**:
+  - Type: profile
+  - Professional bio focused
+- **Services Page**:
+  - Type: website
+  - Service-focused description
+- **Contact Page**:
+  - Type: website
+  - Hire/availability messaging
+- **Project Pages**:
+  - Dynamic metadata per project
+  - SEO handled by routing
+
+#### JSON-LD Structured Data
+Created `StructuredData.tsx` component with 4 schema types:
+
+1. **PersonSchema** (Homepage)
+   - Schema.org Person type
+   - Developer name, URL, job title
+   - Links to GitHub and LinkedIn (sameAs)
+   - Work organization (Peregrine-Tech)
+   - Skills array (10+ technologies)
+
+2. **WebsiteSchema** (Homepage)
+   - Schema.org WebSite type
+   - Site name, URL, description
+   - Author information
+
+3. **ProfessionalServiceSchema** (Services Page)
+   - Schema.org ProfessionalService type
+   - Service name, description, provider
+   - Area served: Worldwide
+   - 6 service types listed
+   - Contact email
+
+4. **ProjectSchema** (Individual Project Pages)
+   - Schema.org SoftwareSourceCode type
+   - Project name, description, URL
+   - Author information
+   - Programming languages/tech stack
+
+#### Components & Architecture
+- Created `src/components/seo/StructuredData.tsx`
+- Integrated structured data into:
+  - Homepage (PersonSchema + WebsiteSchema)
+  - Services page (ProfessionalServiceSchema)
+  - Project detail pages (ProjectSchema)
+- All schemas properly formatted for Google Rich Results
+
+### Quality & Performance
+- ✅ ESLint: 0 errors, 0 warnings
+- ✅ TypeScript: 0 errors
+- ✅ Build: Successful (21 pages pre-rendered)
+- ✅ Sitemap generated automatically
+- ✅ Robots.txt generated automatically
+- ✅ All metadata properly resolved with metadataBase
+- ✅ Structured data valid for search engines
+- ✅ Pre-rendered static pages for fast loading
+- ✅ Next.js 16 Turbopack optimization
+
+### Notes
+- Image optimization deferred (no project images yet)
+- Video lazy loading deferred (no videos yet)
+- Bundle size optimization handled by Next.js 16
+- Lighthouse audit scheduled for Phase 9
+
 ## [0.7.0] - 2026-05-17
 
 ### Added - Phase 7: Contact Page & Form ✅
