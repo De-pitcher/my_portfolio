@@ -7,6 +7,77 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-05-17
+
+### Added - Phase 6: About & Services Pages ✅
+
+#### About Page (`/about`)
+- Professional bio section with 5+ years of experience
+- Work experience timeline:
+  - Current: Full-Stack Software Engineer at Peregrine-Tech (2023-Present)
+  - Previous: Mobile App Developer, Independent Contractor (2021-2023)
+  - Early: Junior Full-Stack Developer (2020-2021)
+- Technical skills breakdown by category:
+  - Frontend (React, Next.js, TypeScript, Tailwind, Ant Design)
+  - Mobile (Flutter, Riverpod)
+  - Backend (Node.js, Express, Python, FastAPI)
+  - Database (MongoDB, PostgreSQL)
+  - DevOps & Tools (Git, Docker, REST APIs)
+- Proficiency indicators (4-dot system for expertise levels)
+- Statistics grid (5+ years, 17+ projects, 20+ technologies)
+- Resume download button (link to /resume.pdf)
+- Full metadata for SEO
+- Responsive design with mobile optimization
+
+#### Services Page (`/services`)
+- 6 primary services offered:
+  - Custom POS/Inventory Systems
+  - Cross-Platform Mobile Apps
+  - Enterprise SaaS Platforms
+  - Backend Development
+  - AI/ML Integration
+  - IoT/Hardware Integration
+- Service cards with:
+  - Emoji icons with hover animations
+  - Descriptions
+  - Technologies per service
+  - Scale hover effect
+- 5-step development process:
+  1. Discovery & Planning
+  2. Design & Architecture
+  3. Development & Implementation
+  4. Testing & Deployment
+  5. Support & Maintenance
+- "Why Choose Me" section with 6 expertise areas
+- Visual process timeline with numbered steps
+- Call-to-action section with links to projects and contact
+- Full metadata for SEO
+- Responsive design throughout
+
+#### Component Architecture
+- Created `AboutClient.tsx` with client components:
+  - AboutHero
+  - AboutExperience
+  - AboutSkills
+  - AboutStats
+  - AboutResume
+- Created `ServicesClient.tsx` with client components:
+  - ServicesHero
+  - ServicesGrid
+  - ServicesProcess
+  - ServicesExpertise
+  - ServicesCTA
+- Page components are server-only for metadata
+- Proper server/client boundary maintained
+- Framer Motion animations in client components
+
+### Quality
+- ESLint: 0 errors, 0 warnings
+- TypeScript: 0 errors
+- Build: Successful with all pages pre-rendered
+- Mobile responsive (tested on all breakpoints)
+- Accessible components with proper semantic HTML
+
 ## [0.5.0] - 2026-05-17
 
 ### Added - Phase 5: Projects Page & Individual Project Pages ✅
