@@ -7,6 +7,120 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-05-17
+
+### Fixed
+- **Type System:** Updated `Skill` interface to use `level` instead of `proficiency` for consistency
+- **Skills Data:** Standardized category naming to lowercase across all skills
+- **ESLint Errors:** Fixed all 5 ESLint errors and 1 warning:
+  - Escaped apostrophes in Hero and CallToAction components
+  - Removed unused Button import from Header
+  - Refactored CardProps to use type alias instead of empty interface
+  - Fixed ThemeToggle React anti-pattern (setState in useEffect)
+- **Tailwind Config:** Simplified color definitions to match actual CSS variables
+- **Code Quality:** Achieved 0 ESLint errors, 0 TypeScript errors
+
+### Changed
+- ThemeToggle now initializes theme from system preferences correctly
+- Improved type safety across all data files
+
+## [0.2.0] - 2026-05-16
+
+### Added - Phase 3: Homepage Sections ✅
+
+#### Section Components
+- **Hero Section** (`src/components/sections/Hero.tsx`):
+  - Animated heading with waving hand emoji
+  - Stagger animations for text elements
+  - Social media links (GitHub, LinkedIn, Email)
+  - Call-to-action buttons (View Projects, Contact Me)
+  - Responsive text sizing (5xl to 7xl)
+- **Featured Projects** (`src/components/sections/FeaturedProjects.tsx`):
+  - Grid layout with 4 featured projects
+  - NDA protection badges
+  - Category tags (web, mobile, IoT)
+  - Technology stack badges
+  - Scroll-triggered stagger animations
+- **Tech Stack** (`src/components/sections/TechStack.tsx`):
+  - Skills grouped by category
+  - Proficiency indicators (4-dot system)
+  - Hover scale animations
+  - Responsive grid layout (2, 4, 6 columns)
+- **Services Overview** (`src/components/sections/ServicesOverview.tsx`):
+  - 6 service cards with emoji icons
+  - Hover effects on cards
+  - Link to detailed services page
+- **Call to Action** (`src/components/sections/CallToAction.tsx`):
+  - Stats section (5+ years, 17+ projects, 100% satisfaction)
+  - Dual CTAs (Get In Touch, View My Work)
+  - Gradient background decoration
+
+#### Page Updates
+- Updated `src/app/page.tsx` to use all new section components
+- Removed placeholder test content
+
+### Fixed
+- Skills data grouping by category in TechStack component
+- Type safety for skill proficiency levels
+
+## [0.1.5] - 2026-05-16
+
+### Added - Phase 2: Core Layout & Components ✅
+
+#### Layout Components
+- **Header** (`src/components/layout/Header.tsx`):
+  - Fixed navigation bar with scroll effect
+  - Mobile hamburger menu with toggle animation
+  - Active link highlighting based on current route
+  - Backdrop blur on scroll for glassmorphism effect
+  - Desktop and mobile responsive navigation
+- **Footer** (`src/components/layout/Footer.tsx`):
+  - Three-column layout (Brand, Quick Links, Social)
+  - External social links (GitHub, LinkedIn)
+  - Email contact link
+  - Copyright notice with dynamic year
+- **ThemeToggle** (`src/components/layout/ThemeToggle.tsx`):
+  - Placeholder component for dark/light mode switching
+  - Sun/moon icon toggle
+  - System preference detection
+
+#### UI Components
+- **Button** (`src/components/ui/Button.tsx`):
+  - 4 variants: default, outline, ghost, link
+  - 4 sizes: default, sm, lg, icon
+  - Forward ref support
+  - Full TypeScript typings
+- **Card** (`src/components/ui/Card.tsx`):
+  - Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter
+  - Composable architecture
+  - Consistent spacing and styling
+- **Badge** (`src/components/ui/Badge.tsx`):
+  - 3 variants: default, secondary, outline
+  - Used for tags, categories, status indicators
+- **Section** (`src/components/ui/Section.tsx`):
+  - Responsive padding wrapper
+  - Container with max-width
+  - Consistent vertical spacing
+
+#### Layout Integration
+- Updated `src/app/layout.tsx`:
+  - Integrated Header and Footer
+  - Added site metadata from constants
+  - Configured Google Fonts (Geist Sans, Geist Mono)
+  - Set up proper HTML structure with flex layout
+- Updated `src/app/page.tsx`:
+  - Created temporary homepage with component preview
+  - Tested all UI components
+
+#### Styling
+- Refined `src/app/globals.css`:
+  - Fixed Tailwind v4 compatibility
+  - Added proper font-family stack
+  - Ensured dark mode CSS variables work
+
+### Changed
+- Layout structure now uses Header/Footer on all pages
+
 ## [0.1.0] - 2026-05-16
 
 ### Added - Phase 1: Foundation & Setup ✅
