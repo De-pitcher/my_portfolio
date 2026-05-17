@@ -7,6 +7,55 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-05-17
+
+### Added - Phase 4: Projects Data & Structure ✅
+
+#### Projects Database
+- Created comprehensive `src/data/projects.ts` with 17+ projects
+- Defined complete project metadata structure:
+  - **Peregrine-Tech Projects (NDA Protected):**
+    - Peregrine POS (React/Vite)
+    - Peregrine POS Mobile (Flutter)
+    - Enterprise Management System (React/Vite)
+    - Scale System (React/Vite)
+    - Scale Mobile (Flutter)
+    - Peregrine AI (Node.js/TypeScript)
+    - Peregrine Compass (Python/FastAPI)
+  - **Personal Projects (Full Disclosure):**
+    - Match-Dey.Native (Flutter)
+    - PyCatPrint (Python)
+    - Any2PDF (Go)
+    - And more
+
+#### Project Structure
+- Each project includes:
+  - ID, slug, title, tagline, description
+  - Multiple categories (web, mobile, backend, iot, ai-ml, fullstack)
+  - Technology stack with proficiency indicators
+  - Features and key outcomes
+  - Media paths (placeholder support for Phase 5)
+  - GitHub/Live URLs
+  - NDA protection flag
+  - Featured flag for homepage display
+
+#### FeaturedProjects Integration
+- Updated `FeaturedProjects` component to use real project data
+- Filters for featured projects automatically
+- Dynamic rendering based on data availability
+- Fallback message when no featured projects exist
+- Support for multiple categories per project
+
+#### Data Quality
+- Type-safe project structure with TypeScript
+- NDA-compliant descriptions (generic for protected projects)
+- Full transparency for personal projects
+- Prepared for media asset integration in Phase 5
+
+### Fixed
+- Fixed TechStack category type validation (changed "tools" to "devops")
+- Ensured all projects match TypeScript interface requirements
+
 ## [0.3.0] - 2026-05-17
 
 ### Fixed
