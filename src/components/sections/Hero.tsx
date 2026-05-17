@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import Link from "next/link";
+import { siteConfig } from "@/lib/constants";
 
 export function Hero() {
   return (
@@ -24,7 +25,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Hi, I&apos;m Noel{" "}
+            Hi, I&apos;m {siteConfig.name.split(" ")[0]}{" "}
             <motion.span
               className="inline-block"
               animate={{ rotate: [0, 14, -8, 14, 0] }}
@@ -71,7 +72,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <a
-              href="https://github.com/De-pitcher"
+              href={siteConfig.author.github}
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-foreground transition-colors"
@@ -82,7 +83,7 @@ export function Hero() {
               </svg>
             </a>
             <a
-              href="https://linkedin.com/in/noelperegrine"
+              href={siteConfig.author.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 hover:text-foreground transition-colors"
@@ -93,7 +94,18 @@ export function Hero() {
               </svg>
             </a>
             <a
-              href="mailto:noel.dev@peregrineexpress.io"
+              href={siteConfig.author.twitter}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground/60 hover:text-foreground transition-colors"
+              aria-label="Twitter"
+            >
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a
+              href={`mailto:${siteConfig.author.email}`}
               className="text-foreground/60 hover:text-foreground transition-colors"
               aria-label="Email"
             >

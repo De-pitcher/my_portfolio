@@ -11,6 +11,7 @@ const footerLinks = {
   social: [
     { name: "GitHub", href: siteConfig.author.github },
     { name: "LinkedIn", href: siteConfig.author.linkedin },
+    { name: "Twitter", href: siteConfig.author.twitter },
   ],
 };
 

@@ -1,14 +1,16 @@
 export const siteConfig = {
-  name: "Noel",
-  title: "Noel - Full-Stack Developer",
+  name: "Noel Emmanuel",
+  title: "Noel Emmanuel - Full-Stack Developer",
   description:
     "Full-Stack Software Engineer specializing in Enterprise SaaS, Cross-Platform Development, and IoT Integration",
-  url: "https://noelperegrine.dev", // Update with actual domain
+  url: "https://my-portfolio-blush-eta-xzdxw85xf8.vercel.app", // Update with custom domain later
   author: {
-    name: "Noelperegrine",
-    email: "noel.dev@peregrineexpress.io",
+    name: "Noel Emmanuel",
+    email: "emmanwa000@gmail.com",
+    phone: "+2348165501134",
     github: "https://github.com/De-pitcher",
-    linkedin: "https://linkedin.com/in/noelperegrine", // Update with actual
+    linkedin: "https://www.linkedin.com/in/noel-emmanuel-05abb4240/",
+    twitter: "https://x.com/SparkzArkTech",
   },
   keywords: [
     "Full-Stack Developer",
@@ -18,5 +20,7 @@ export const siteConfig = {
     "Enterprise SaaS",
     "IoT Integration",
     "Cross-Platform Development",
+    "Noel Emmanuel",
+    "De-pitcher",
   ],
 };

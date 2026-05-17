@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Skill } from "@/types";
 import Link from "next/link";
+import { siteConfig } from "@/lib/constants";
 
 interface AboutClientProps {
   experience: Array<{
@@ -52,7 +53,7 @@ export function AboutHero() {
       </Badge>
       <h1 className="text-5xl md:text-6xl font-bold mb-6">Full-Stack Engineer</h1>
       <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
-        I&apos;m Noel, a software engineer with{" "}
+        I&apos;m {siteConfig.name}, a software engineer with{" "}
         <span className="text-foreground font-semibold">5+ years of experience</span> building enterprise-grade
         applications. Specializing in full-stack development, cross-platform mobile apps, and AI integration.
       </p>
