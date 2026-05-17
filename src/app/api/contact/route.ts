@@ -10,15 +10,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Verify transporter configuration
-transporter.verify((error) => {
-  if (error) {
-    console.error("Email transporter error:", error);
-  } else {
-    console.log("Email server is ready to send messages");
-  }
-});
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
