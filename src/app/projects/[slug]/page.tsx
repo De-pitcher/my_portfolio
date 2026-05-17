@@ -6,6 +6,7 @@ import {
   ProjectNavigation,
 } from "@/components/project/ProjectDetailClient";
 import { Section } from "@/components/ui/Section";
+import { ProjectSchema } from "@/components/seo/StructuredData";
 
 interface ProjectDetailPageProps {
   params: Promise<{
@@ -28,6 +29,7 @@ export default async function ProjectDetailPage({ params }: ProjectDetailPagePro
 
   return (
     <div className="pt-20">
+      <ProjectSchema project={project} />
       {/* Hero Section */}
       <Section className="bg-gradient-to-b from-transparent to-foreground/5">
         <ProjectDetailHero project={project} />

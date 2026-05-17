@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { skills } from "@/data/skills";
+import { siteConfig } from "@/lib/constants";
 import {
   AboutHero,
   AboutExperience,
@@ -9,8 +10,14 @@ import {
 } from "@/components/about/AboutClient";
 
 export const metadata = {
-  title: "About - Noel",
-  description: "Learn about Noel, a full-stack software engineer specializing in enterprise SaaS, mobile apps, and IoT integration.",
+  title: "About",
+  description: "Learn about Noel, a full-stack software engineer with 5+ years of experience specializing in enterprise SaaS, cross-platform mobile apps, and IoT integration.",
+  openGraph: {
+    title: "About Noel - Full-Stack Software Engineer",
+    description: "5+ years of experience building enterprise-grade applications. Specializing in React, Next.js, Flutter, Node.js, and AI integration.",
+    url: `${siteConfig.url}/about`,
+    type: "profile",
+  },
 };
 
 const experience = [

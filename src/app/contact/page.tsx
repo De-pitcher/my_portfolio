@@ -1,4 +1,5 @@
 import { Section } from "@/components/ui/Section";
+import { siteConfig } from "@/lib/constants";
 import {
   ContactHero,
   ContactForm,
@@ -7,8 +8,14 @@ import {
 } from "@/components/contact/ContactClient";
 
 export const metadata = {
-  title: "Contact - Noel",
-  description: "Get in touch with Noel for freelance projects, full-time opportunities, or general inquiries. Available for web development, mobile apps, and backend systems.",
+  title: "Contact",
+  description: "Get in touch with Noel for freelance projects, full-time opportunities, or general inquiries. Available for web development, mobile apps, backend systems, and AI integration.",
+  openGraph: {
+    title: "Contact Noel - Hire a Full-Stack Developer",
+    description: "Available for freelance projects and full-time opportunities. Specializing in React, Next.js, Flutter, Node.js, and AI integration.",
+    url: `${siteConfig.url}/contact`,
+    type: "website",
+  },
 };
 
 export default function ContactPage() {

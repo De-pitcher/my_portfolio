@@ -1,5 +1,8 @@
 "use client";
 
+// Note: metadata cannot be exported from client components
+// SEO handled by root layout
+
 import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/Badge";

@@ -1,5 +1,6 @@
 import { Section } from "@/components/ui/Section";
 import { services } from "@/data/services";
+import { siteConfig } from "@/lib/constants";
 import {
   ServicesHero,
   ServicesGrid,
@@ -7,10 +8,17 @@ import {
   ServicesExpertise,
   ServicesCTA,
 } from "@/components/services/ServicesClient";
+import { ProfessionalServiceSchema } from "@/components/seo/StructuredData";
 
 export const metadata = {
-  title: "Services - Noel",
-  description: "Custom software development services including POS systems, mobile apps, SaaS platforms, backend development, AI/ML integration, and IoT solutions.",
+  title: "Services",
+  description: "Custom software development services including POS systems, cross-platform mobile apps, enterprise SaaS platforms, backend development, AI/ML integration, and IoT solutions.",
+  openGraph: {
+    title: "Services - Custom Software Development",
+    description: "Full-stack development services: POS systems, mobile apps (Flutter), SaaS platforms, backend APIs, AI integration, and IoT solutions.",
+    url: `${siteConfig.url}/services`,
+    type: "website",
+  },
 };
 
 const processSteps = [
@@ -44,6 +52,7 @@ const processSteps = [
 export default function ServicesPage() {
   return (
     <div className="pt-20">
+      <ProfessionalServiceSchema />
       {/* Hero Section */}
       <Section className="bg-gradient-to-b from-transparent to-foreground/5">
         <ServicesHero />
