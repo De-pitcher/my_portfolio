@@ -83,10 +83,14 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
 
+      const result = await response.json();
+      
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        console.error('API Error:', result);
+        throw new Error(result.error || 'Failed to send message');
       }
       
+      console.log('Email sent successfully:', result);
       setSubmitStatus("success");
       reset();
     } catch (error) {

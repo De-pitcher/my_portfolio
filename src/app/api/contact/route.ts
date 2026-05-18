@@ -49,21 +49,32 @@ export async function POST(req: NextRequest) {
     });
 
     if (error) {
-      console.error("Resend error:", error);
+      console.error("Resend API error details:", {
+        error,
+        errorMessage: error.message,
+        errorName: error.name,
+        fullError: JSON.stringify(error, null, 2),
+      });
       return NextResponse.json(
-        { error: "Failed to send email. Please try again later." },
+        { error: `Email failed: ${error.message || JSON.stringify(error)}` },
         { status: 500 }
       );
     }
 
+    console.log("Email sent successfully via Resend:", data);
     return NextResponse.json(
       { message: "Email sent successfully", id: data?.id },
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("Unexpected error in contact API:", error);
+    console.error("Error details:", {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      stack: error instanceof Error ? error.stack : undefined,
+      fullError: JSON.stringify(error, null, 2),
+    });
     return NextResponse.json(
-      { error: "Failed to send email. Please try again later." },
+      { error: `Server error: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }
     );
   }
