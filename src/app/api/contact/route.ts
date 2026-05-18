@@ -1,14 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
 
-// Email configuration
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASSWORD,
-  },
-});
+// Initialize Resend
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: NextRequest) {
   try {
@@ -23,10 +17,10 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Email to yourself (you receive the message)
-    const mailOptions = {
-      from: process.env.EMAIL_FROM,
-      to: process.env.EMAIL_TO,
+    // Send email using Resend
+    const { data, error } = await resend.emails.send({
+      from: process.env.EMAIL_FROM || "onboarding@resend.dev",
+      to: process.env.EMAIL_TO || "emmanwa000@gmail.com",
       replyTo: email, // Visitor's email for easy reply
       subject: `Portfolio Contact: ${subject}`,
       html: `
@@ -37,7 +31,7 @@ export async function POST(req: NextRequest) {
           
           <div style="background: #f5f5f5; padding: 20px; margin: 20px 0; border-radius: 5px;">
             <p style="margin: 10px 0;"><strong>From:</strong> ${name}</p>
-            <p style="margin: 10px 0;"><strong>Email:</strong> ${email}</p>
+            <p style="margin: 10px 0;"><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
             <p style="margin: 10px 0;"><strong>Subject:</strong> ${subject}</p>
           </div>
           
@@ -52,27 +46,18 @@ export async function POST(req: NextRequest) {
           </div>
         </div>
       `,
-      text: `
-New Contact Form Submission
+    });
 
-From: ${name}
-Email: ${email}
-Subject: ${subject}
-
-Message:
-${message}
-
----
-This message was sent from your portfolio contact form.
-Reply to ${email} to respond.
-      `,
-    };
-
-    // Send email
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { error: "Failed to send email. Please try again later." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
-      { message: "Email sent successfully" },
+      { message: "Email sent successfully", id: data?.id },
       { status: 200 }
     );
   } catch (error) {
