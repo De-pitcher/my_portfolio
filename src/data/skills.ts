@@ -17,13 +17,19 @@ export const skills: Skill[] = [
   { name: "Express", category: "Backend", level: "expert" },
   { name: "Python", category: "Backend", level: "advanced", icon: "python" },
   { name: "FastAPI", category: "Backend", level: "advanced" },
+  { name: "NestJS", category: "Backend", level: "advanced" },
+  { name: "REST APIs", category: "Backend", level: "expert" },
   
   // Database
+  { name: "MySQL", category: "Database", level: "advanced" },
+  { name: "Redis", category: "Database", level: "advanced" },
   { name: "MongoDB", category: "Database", level: "expert", icon: "mongodb" },
   { name: "PostgreSQL", category: "Database", level: "advanced", icon: "postgresql" },
   
   // DevOps & Tools
   { name: "Git", category: "Tools", level: "expert", icon: "git" },
-  { name: "Docker", category: "DevOps", level: "intermediate" },
-  { name: "REST APIs", category: "Backend", level: "expert" },
+  { name: "Docker", category: "DevOps", level: "advanced" },
+  { name: "Jenkins & CI/CD", category: "DevOps", level: "advanced" },
+  { name: "AWS", category: "DevOps", level: "intermediate" },
+  { name: "Google Cloud", category: "DevOps", level: "intermediate" },
 ];

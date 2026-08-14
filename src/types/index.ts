@@ -15,6 +15,7 @@ export interface Project {
   architectureDiagram?: string;
   githubUrl?: string;
   liveUrl?: string;
+  playStoreUrl?: string;
   isFeatured: boolean;
   isNDAProtected: boolean;
   order: number;

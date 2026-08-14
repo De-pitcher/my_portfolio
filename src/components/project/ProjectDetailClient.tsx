@@ -50,6 +50,13 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
                   <Button size="lg">Visit Project</Button>
                 </a>
               )}
+              {project.playStoreUrl && (
+                <a href={project.playStoreUrl} target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-[#01875F] text-white hover:bg-[#01875F]/90 border-transparent">
+                    Download on Play Store
+                  </Button>
+                </a>
+              )}
               {project.githubUrl && (
                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg">

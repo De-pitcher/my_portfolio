@@ -1,27 +1,31 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(() => {
-    // Initialize from system preference
-    if (typeof window !== "undefined") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    // Listen for system theme changes
-    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
-    const handleChange = (e: MediaQueryListEvent) => setIsDark(e.matches);
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
+    setMounted(true);
   }, []);
 
+  if (!mounted) {
+    return (
+      <button
+        className="p-2 rounded-md hover:bg-foreground/10 transition-colors"
+        aria-label="Toggle theme"
+      >
+        <span className="w-5 h-5 block" />
+      </button>
+    );
+  }
+
+  const isDark = theme === "dark" || (theme === "system" && typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
   const toggleTheme = () => {
-    setIsDark(!isDark);
-    // In Phase 3, we'll implement actual theme switching with context
+    setTheme(isDark ? "light" : "dark");
   };
 
   return (
