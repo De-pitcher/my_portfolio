@@ -18,10 +18,11 @@ export interface Project {
   playStoreUrl?: string;
   isFeatured: boolean;
   isNDAProtected: boolean;
+  status?: "Production" | "In Testing" | "Open Source" | "Active MVP";
   order: number;
 }
 
-export type ProjectCategory = "web" | "mobile" | "backend" | "iot" | "ai-ml" | "fullstack";
+export type ProjectCategory = "web" | "mobile" | "backend" | "iot" | "ai-ml" | "fullstack" | "systems" | "open-source";
 
 export interface TechStack {
   name: string;

@@ -36,15 +36,37 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
         <CardHeader className="flex-1">
           <div className="flex items-start justify-between gap-2 mb-2 flex-wrap">
-            <div className="flex gap-2 flex-wrap">
+            <div className="flex gap-1.5 flex-wrap">
+              {project.status && (
+                <span
+                  className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[11px] font-medium border ${
+                    project.status === "Production"
+                      ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/20"
+                      : project.status === "Open Source"
+                      ? "bg-sky-500/10 text-sky-400 border-sky-500/20"
+                      : "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                  }`}
+                >
+                  <span
+                    className={`w-1.5 h-1.5 rounded-full ${
+                      project.status === "Production"
+                        ? "bg-emerald-500 animate-pulse"
+                        : project.status === "Open Source"
+                        ? "bg-sky-400"
+                        : "bg-amber-400"
+                    }`}
+                  />
+                  {project.status}
+                </span>
+              )}
               {project.category.map((cat) => (
-                <Badge key={cat} variant="secondary" className="text-xs">
-                  {cat}
+                <Badge key={cat} variant="secondary" className="text-xs capitalize">
+                  {cat === "ai-ml" ? "AI/ML" : cat === "open-source" ? "Open Source" : cat}
                 </Badge>
               ))}
             </div>
             {project.isNDAProtected && (
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline" className="text-xs text-muted-foreground">
                 NDA
               </Badge>
             )}

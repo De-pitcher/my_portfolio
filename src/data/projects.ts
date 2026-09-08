@@ -1,7 +1,84 @@
 import { Project } from "@/types";
 
 export const projects: Project[] = [
-  // Featured Projects (Top priority)
+  // 1. Featured AI Systems & Developer Tooling
+  {
+    id: "agentcli",
+    slug: "agentcli",
+    title: "agentcli - Autonomous AI Agent CLI",
+    tagline: "Model-Agnostic, Multi-Agent Autonomous Coding Assistant with MCP & TUI",
+    description:
+      "A budget-conscious, model-agnostic AI agent CLI that talks to models via OpenRouter. Features autonomous multi-step execution, Model Context Protocol (MCP) stdio client/server, local SQLite session persistence with real-time cost tracking, multi-agent consensus debate, and full-screen Textual TUI dashboard.",
+    category: ["ai-ml", "backend", "open-source"],
+    tags: ["Python", "MCP", "OpenRouter", "SQLite", "Textual TUI", "LLM Agents", "Git Worktrees"],
+    thumbnail: "/projects/ai-dev-thumb.jpg",
+    images: ["/projects/ai-dev-1.jpg"],
+    techStack: [
+      { name: "Python 3.10+", category: "backend", icon: "python" },
+      { name: "MCP Protocol", category: "other" },
+      { name: "OpenRouter LLMs", category: "other" },
+      { name: "SQLite", category: "database" },
+      { name: "Textual / Rich TUI", category: "frontend" },
+      { name: "Git Worktrees", category: "devops" },
+    ],
+    features: [
+      "Autonomous Plan → Act → Reflect execution loop with LLM reflection",
+      "Model Context Protocol (MCP) bidirectional JSON-RPC integration",
+      "Modular sub-agents with Git branch and worktree isolation",
+      "Multi-agent consensus debate and recursive peer delegation",
+      "Dynamic token budget ceilings and real-time session spend tracking",
+      "Full-screen interactive TUI dashboard with telemetry gauges",
+      "Interactive slash commands (/budget, /model, /goal, /tokens, /cost)",
+    ],
+    outcomes: [
+      "Zero vendor lock-in with support for 200+ open-source and proprietary models",
+      "Deterministic sub-cent cost enforcement preventing runaway LLM billing",
+      "Complete task autonomy without context window bloat via LRU cache",
+    ],
+    githubUrl: "https://github.com/De-pitcher/agentcli",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 1,
+  },
+
+  {
+    id: "novu-contributions",
+    slug: "novu-contributions",
+    title: "Novu Open-Source Core Contributions",
+    tagline: "Enterprise Notification Infrastructure (PRs Merged Upstream)",
+    description:
+      "Core open-source contributor to Novu (25k+ GitHub stars notification infrastructure). Engineered configurable HMAC encoding in the email webhook provider (PR #12430 merged upstream) and fixed password-manager autofill and form accessibility in self-hosted authentication workflows (PR #12445).",
+    category: ["backend", "open-source"],
+    tags: ["NestJS", "TypeScript", "Redis", "BullMQ", "HMAC", "Open Source", "Security"],
+    thumbnail: "/projects/ems-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "NestJS", category: "backend" },
+      { name: "TypeScript", category: "frontend", icon: "typescript" },
+      { name: "Redis & BullMQ", category: "database" },
+      { name: "Cryptographic HMAC", category: "backend" },
+      { name: "Jest", category: "other" },
+    ],
+    features: [
+      "Configurable HMAC webhook signature verification supporting multi-provider encoding formats",
+      "Resolved security vulnerabilities in self-hosted authentication forms",
+      "Added rigorous unit and integration tests across notification delivery pipelines",
+      "Clean adherence to enterprise monorepo standards and CI/CD quality gates",
+    ],
+    outcomes: [
+      "Merged directly into Novu core releases used by thousands of engineering teams",
+      "Enhanced security verification for outbound email webhook events",
+      "Strengthened developer ergonomics for enterprise self-hosted instances",
+    ],
+    githubUrl: "https://github.com/novuhq/novu/pull/12430",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 2,
+  },
+
+  // 2. Production Enterprise & SaaS Systems
   {
     id: "peregrine-pos",
     slug: "peregrine-pos",
@@ -45,7 +122,8 @@ export const projects: Project[] = [
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.peregrinepos.app",
     isFeatured: true,
     isNDAProtected: true,
-    order: 1,
+    status: "Production",
+    order: 3,
   },
 
   {
@@ -88,7 +166,8 @@ export const projects: Project[] = [
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.scale_ems",
     isFeatured: true,
     isNDAProtected: true,
-    order: 2,
+    status: "Production",
+    order: 4,
   },
 
   {
@@ -134,7 +213,84 @@ export const projects: Project[] = [
     liveUrl: "https://scale-system.peregrine.ng",
     isFeatured: true,
     isNDAProtected: true,
-    order: 3,
+    status: "Production",
+    order: 5,
+  },
+
+  {
+    id: "errandbou-be",
+    slug: "errandbou-be",
+    title: "Errandbou Backend Platform",
+    tagline: "On-Demand Service Marketplace API with BullMQ & Prisma",
+    description:
+      "A high-performance NestJS backend powering an on-demand service marketplace platform. Features Prisma ORM with PostgreSQL, Redis-backed BullMQ job queues for async worker tasks, MinIO object storage, Docker containerization, and role-based multi-tier authentication.",
+    category: ["backend", "fullstack"],
+    tags: ["NestJS", "TypeScript", "Prisma", "PostgreSQL", "Redis", "BullMQ", "Docker", "MinIO"],
+    thumbnail: "/projects/ethnikraft-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "NestJS", category: "backend" },
+      { name: "TypeScript", category: "frontend", icon: "typescript" },
+      { name: "Prisma ORM", category: "database" },
+      { name: "PostgreSQL", category: "database", icon: "postgresql" },
+      { name: "Redis & BullMQ", category: "database" },
+      { name: "Docker", category: "devops" },
+      { name: "MinIO", category: "devops" },
+    ],
+    features: [
+      "Modular NestJS architecture with strict clean separation of concerns",
+      "Prisma ORM migrations and relational models with PostgreSQL",
+      "BullMQ asynchronous worker queues for background notifications and job dispatching",
+      "MinIO S3-compatible cloud object storage for verification documents",
+      "Role-based authorization and JWT session handling",
+      "Comprehensive Swagger OpenAPI documentation",
+    ],
+    outcomes: [
+      "High-throughput transactional architecture for real-time task booking",
+      "Robust containerized local and staging deployment with Docker Compose",
+      "Clean automated database migrations with zero downtime",
+    ],
+    isFeatured: true,
+    isNDAProtected: true,
+    status: "Production",
+    order: 6,
+  },
+
+  {
+    id: "unipdf",
+    slug: "unipdf",
+    title: "UniPDF - Universal CLI Document to PDF Converter",
+    tagline: "Zero-Dependency Statically Compiled PDF Engine in Rust",
+    description:
+      "A blazingly fast, zero-dependency command-line utility built in Rust that converts plain text, images, Markdown, and Office documents directly into PDF format without requiring heavyweight runtimes like LibreOffice or headless Chrome.",
+    category: ["systems", "open-source"],
+    tags: ["Rust", "printpdf", "clap", "CLI", "Systems Programming", "Image Processing"],
+    thumbnail: "/projects/any2pdf-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "Rust", category: "backend", icon: "rust" },
+      { name: "printpdf", category: "other" },
+      { name: "clap v4", category: "other" },
+      { name: "image crate", category: "other" },
+      { name: "docx-rs", category: "other" },
+    ],
+    features: [
+      "Zero external runtime dependencies — compiled to single standalone static binary",
+      "High-speed plain text rendering with automatic line-wrapping and pagination",
+      "Multi-image batch to PDF compilation (PNG, JPG, BMP, WEBP)",
+      "Streaming AST markdown parsing via pulldown-cmark",
+      "Graceful fallback handling for legacy document formats",
+    ],
+    outcomes: [
+      "Sub-5MB binary size with instant startup and execution time",
+      "Eliminates 300MB+ container bloat caused by headless Chrome/LibreOffice",
+      "Cross-platform compilation across Linux, macOS, and Windows",
+    ],
+    githubUrl: "https://github.com/De-pitcher/UniPDF",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 7,
   },
 
   {
@@ -178,10 +334,45 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/De-pitcher/Match-Dey.Native",
     isFeatured: true,
     isNDAProtected: false,
-    order: 4,
+    status: "In Testing",
+    order: 8,
   },
 
-  // Additional Projects
+  {
+    id: "andy",
+    slug: "andy",
+    title: "Andy - AI Voice Assistant for Android",
+    tagline: "Siri-Like Multimodal Voice Assistant in Flutter",
+    description:
+      "A fast, interactive voice assistant mobile application built with Flutter and Dart. Integrates OpenAI GPT-4 with real-time Speech-to-Text (STT) and Text-to-Speech (TTS) audio synthesis, providing natural spoken conversations on Android.",
+    category: ["mobile", "ai-ml"],
+    tags: ["Flutter", "Dart", "OpenAI GPT-4", "Speech-to-Text", "Text-to-Speech", "Mobile AI"],
+    thumbnail: "/projects/ai-dev-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "Flutter", category: "mobile", icon: "flutter" },
+      { name: "Dart", category: "mobile" },
+      { name: "OpenAI GPT-4", category: "other" },
+      { name: "Speech-to-Text", category: "mobile" },
+      { name: "Text-to-Speech", category: "mobile" },
+    ],
+    features: [
+      "Tap-to-talk voice recording and transcription",
+      "Real-time streaming conversation powered by OpenAI GPT-4",
+      "Natural voice synthesis audio output",
+      "Interactive chat history transcript interface",
+    ],
+    outcomes: [
+      "Sub-second voice turnaround for mobile queries",
+      "Hands-free voice assistant experience on Android devices",
+    ],
+    githubUrl: "https://github.com/De-pitcher/andy",
+    isFeatured: false,
+    isNDAProtected: false,
+    status: "In Testing",
+    order: 9,
+  },
+
   {
     id: "peregrine-compass",
     slug: "peregrine-compass",
@@ -218,9 +409,10 @@ export const projects: Project[] = [
       "Production-ready error handling",
       "Scalable to enterprise workloads",
     ],
-    isFeatured: true,
+    isFeatured: false,
     isNDAProtected: true,
-    order: 5,
+    status: "Production",
+    order: 10,
   },
 
   {
@@ -257,9 +449,10 @@ export const projects: Project[] = [
       "Reduces manual test writing by 70%",
       "Free alternative to cloud AI services",
     ],
-    isFeatured: true,
+    isFeatured: false,
     isNDAProtected: true,
-    order: 6,
+    status: "Production",
+    order: 11,
   },
 
   {
@@ -269,7 +462,7 @@ export const projects: Project[] = [
     tagline: "Python CLI for Bluetooth Thermal Printer Integration",
     description:
       "A Python-based CLI tool for controlling BLE thermal printers via Bluetooth Low Energy. Converts images and PDFs into printer-compatible bitmaps with advanced dithering algorithms.",
-    category: ["backend", "iot"],
+    category: ["backend", "iot", "open-source"],
     tags: ["Python", "BLE", "Image Processing", "Dithering", "CLI", "Hardware Integration"],
     thumbnail: "/projects/pycatprint-thumb.jpg",
     images: ["/projects/pycatprint-1.jpg"],
@@ -299,7 +492,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/De-pitcher/PyCatPrint",
     isFeatured: false,
     isNDAProtected: false,
-    order: 7,
+    status: "Open Source",
+    order: 12,
   },
 
   {
@@ -309,7 +503,7 @@ export const projects: Project[] = [
     tagline: "Convert Any File Format to PDF",
     description:
       "A cross-platform CLI tool that converts multiple file formats to PDF with automatic format detection. Supports documents, spreadsheets, presentations, images, and HTML files.",
-    category: ["backend"],
+    category: ["backend", "open-source"],
     tags: ["Go", "CLI", "File Conversion", "Cross-platform", "Automation"],
     thumbnail: "/projects/any2pdf-thumb.jpg",
     images: ["/projects/any2pdf-1.jpg"],
@@ -339,7 +533,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/De-pitcher/any2pdf",
     isFeatured: false,
     isNDAProtected: false,
-    order: 8,
+    status: "Open Source",
+    order: 13,
   },
 
   {
@@ -347,7 +542,8 @@ export const projects: Project[] = [
     slug: "enterprise-management-system",
     title: "Enterprise Management System Backend",
     tagline: "Scalable Full-Stack Platform with Advanced CI/CD",
-    description: "A highly available and secure Enterprise Management System powering complex business operations across multi-location branches. Integrates advanced DevOps practices, automated Jenkins pipelines, Docker containerization, and strict permission management systems to ensure smooth, secure operations.",
+    description:
+      "A highly available and secure Enterprise Management System powering complex business operations across multi-location branches. Integrates advanced DevOps practices, automated Jenkins pipelines, Docker containerization, and strict permission management systems to ensure smooth, secure operations.",
     category: ["backend", "fullstack"],
     tags: ["React", "Node.js", "MongoDB", "Jenkins", "Docker", "DevOps"],
     thumbnail: "/projects/ems-thumb.jpg",
@@ -364,16 +560,17 @@ export const projects: Project[] = [
       "Designed secure API endpoints with complex multi-tenant role-based access control (RBAC)",
       "Implemented comprehensive database migration and rollback safety protocols",
       "Managed Docker containerization for scalable local and production environments",
-      "Resolved critical synchronization bottlenecks and production bugs"
+      "Resolved critical synchronization bottlenecks and production bugs",
     ],
     outcomes: [
       "Improved deployment efficiency by introducing Jenkins automation",
       "Supported multi-location expansion with seamless branch routing",
-      "Secured API infrastructure against unauthorized cross-tenant data leaks"
+      "Secured API infrastructure against unauthorized cross-tenant data leaks",
     ],
-    isFeatured: true,
+    isFeatured: false,
     isNDAProtected: true,
-    order: 8,
+    status: "Production",
+    order: 14,
   },
 
   {
@@ -381,7 +578,8 @@ export const projects: Project[] = [
     slug: "ethnikraft-backend",
     title: "Ethnikraft Marketplace API",
     tagline: "High-Scale Backend for Three-Sided Marketplace",
-    description: "A robust, highly available NestJS backend architecture built to power a three-sided marketplace. Engineered with deep focus on speed, performance, and best practices for high-scale environments. It handles complex transactional data, queuing, and real-time events.",
+    description:
+      "A robust, highly available NestJS backend architecture built to power a three-sided marketplace. Engineered with deep focus on speed, performance, and best practices for high-scale environments. It handles complex transactional data, queuing, and real-time events.",
     category: ["backend"],
     tags: ["NestJS", "Node.js", "Prisma", "MySQL", "Redis", "Bull MQ", "Jenkins", "AWS"],
     thumbnail: "/projects/ethnikraft-thumb.jpg",
@@ -393,7 +591,7 @@ export const projects: Project[] = [
       { name: "Redis & Bull", category: "database" },
       { name: "Jenkins", category: "devops" },
       { name: "AWS / Cloud", category: "devops" },
-      { name: "Docker", category: "devops" }
+      { name: "Docker", category: "devops" },
     ],
     features: [
       "Designed and maintained API infrastructure handling high concurrency",
@@ -401,16 +599,17 @@ export const projects: Project[] = [
       "Automated CI/CD pipelines using Jenkins and Docker",
       "Collaborated with product teams to solve complex technical debt",
       "Comprehensive E2E and Unit testing using Jest",
-      "Database schema design and performance optimizations via Prisma"
+      "Database schema design and performance optimizations via Prisma",
     ],
     outcomes: [
       "Optimized query performance, reducing load times by 45%",
       "Automated deployments, saving hours of manual DevOps work",
       "Improved system reliability and fault tolerance in production",
     ],
-    isFeatured: true,
+    isFeatured: false,
     isNDAProtected: true,
-    order: 9,
+    status: "Production",
+    order: 15,
   },
 
   {
@@ -418,7 +617,8 @@ export const projects: Project[] = [
     slug: "peregrine-pos-backend",
     title: "Peregrine POS Backend API",
     tagline: "Real-time API Infrastructure for Food Service",
-    description: "A scalable Node.js/Express backend powering a fast-paced food delivery and POS system. It handles real-time order processing, inventory tracking, and complex role-based routing. Built with a deep focus on customer satisfaction through low-latency responses.",
+    description:
+      "A scalable Node.js/Express backend powering a fast-paced food delivery and POS system. It handles real-time order processing, inventory tracking, and complex role-based routing. Built with a deep focus on customer satisfaction through low-latency responses.",
     category: ["backend"],
     tags: ["Node.js", "Express", "MongoDB", "Redis", "Socket.io", "TypeScript"],
     thumbnail: "/projects/pos-api-thumb.jpg",
@@ -429,7 +629,7 @@ export const projects: Project[] = [
       { name: "MongoDB", category: "database" },
       { name: "Redis", category: "database" },
       { name: "Socket.io", category: "backend" },
-      { name: "Google Cloud", category: "devops" }
+      { name: "Google Cloud", category: "devops" },
     ],
     features: [
       "Real-time WebSocket integration for immediate order delivery",
@@ -437,37 +637,16 @@ export const projects: Project[] = [
       "Debugged and resolved critical production bottlenecks",
       "Role-based access control (Admin, Vendor, Rider)",
       "Strict codebase standards for maintainability and testability",
-      "Cloud deployment and log monitoring"
+      "Cloud deployment and log monitoring",
     ],
     outcomes: [
       "Maintained 99.9% uptime during peak food-ordering hours",
       "Reduced API response time through efficient caching strategies",
-      "Seamless integration with frontend and mobile rider apps"
+      "Seamless integration with frontend and mobile rider apps",
     ],
-    isFeatured: true,
-    isNDAProtected: true,
-    order: 10,
-  },
-
-  {
-    id: "peregrine-compass-backend",
-    slug: "peregrine-compass-backend",
-    title: "Peregrine Compass Backend",
-    tagline: "LLM-powered MongoDB query service",
-    description: "FastAPI backend for natural language to MongoDB query conversion.",
-    category: ["backend", "ai-ml"],
-    tags: ["Python", "FastAPI", "MongoDB", "Ollama", "LLM"],
-    thumbnail: "/projects/compass-backend-thumb.jpg",
-    images: [],
-    techStack: [
-      { name: "Python", category: "backend" },
-      { name: "FastAPI", category: "backend" },
-      { name: "Ollama", category: "other" },
-      { name: "MongoDB", category: "database" },
-    ],
-    features: ["Query generation", "Result streaming", "Model management"],
     isFeatured: false,
     isNDAProtected: true,
-    order: 11,
-  }
+    status: "Production",
+    order: 16,
+  },
 ];

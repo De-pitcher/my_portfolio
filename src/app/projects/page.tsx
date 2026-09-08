@@ -11,7 +11,7 @@ import { ProjectCard } from "@/components/project/ProjectCard";
 import { projects } from "@/data/projects";
 import type { ProjectCategory } from "@/types";
 
-const categories: ProjectCategory[] = ["web", "mobile", "backend", "iot", "ai-ml", "fullstack"];
+const categories: ProjectCategory[] = ["ai-ml", "open-source", "web", "mobile", "backend", "systems", "iot", "fullstack"];
 
 export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory | "all">("all");
@@ -36,10 +36,9 @@ export default function ProjectsPage() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Projects & Case Studies</h1>
           <p className="text-lg text-foreground/60 max-w-2xl mx-auto">
-            A collection of {projects.length}+ projects showcasing enterprise solutions, mobile applications,
-            and innovative tools.
+            A curated portfolio of {projects.length}+ production SaaS architectures, autonomous AI systems, mobile applications, and open-source contributions.
           </p>
         </motion.div>
 
@@ -60,6 +59,7 @@ export default function ProjectsPage() {
             </Badge>
             {categories.map((category) => {
               const count = projects.filter((p) => p.category.includes(category)).length;
+              if (count === 0) return null;
               return (
                 <Badge
                   key={category}
@@ -67,7 +67,11 @@ export default function ProjectsPage() {
                   className="cursor-pointer px-4 py-2 text-sm font-medium transition-all capitalize"
                   onClick={() => setSelectedCategory(category)}
                 >
-                  {category === "ai-ml" ? "AI/ML" : category} ({count})
+                  {category === "ai-ml"
+                    ? "AI / ML"
+                    : category === "open-source"
+                    ? "Open Source"
+                    : category} ({count})
                 </Badge>
               );
             })}

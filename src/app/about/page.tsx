@@ -53,7 +53,7 @@ const skillsByCategory = skills.reduce((acc, skill) => {
   return acc;
 }, {} as Record<string, typeof skills>);
 
-const categoryOrder = ["Frontend", "Mobile", "Backend", "Database", "DevOps", "Tools"];
+const categoryOrder = ["Frontend", "Mobile", "Backend", "Systems", "AI/ML", "Database", "DevOps"];
 
 export default function AboutPage() {
   return (

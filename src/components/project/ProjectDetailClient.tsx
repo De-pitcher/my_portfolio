@@ -31,10 +31,32 @@ export function ProjectDetailHero({ project }: ProjectDetailHeroProps) {
 
           {/* Header */}
           <div className="mb-8">
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              {project.status && (
+                <span
+                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${
+                    project.status === "Production"
+                      ? "bg-emerald-500/10 text-emerald-500 border-emerald-500/20"
+                      : project.status === "Open Source"
+                      ? "bg-sky-500/10 text-sky-400 border-sky-500/20"
+                      : "bg-amber-500/10 text-amber-400 border-amber-500/20"
+                  }`}
+                >
+                  <span
+                    className={`w-2 h-2 rounded-full ${
+                      project.status === "Production"
+                        ? "bg-emerald-500 animate-pulse"
+                        : project.status === "Open Source"
+                        ? "bg-sky-400"
+                        : "bg-amber-400"
+                    }`}
+                  />
+                  {project.status}
+                </span>
+              )}
               {project.category.map((cat) => (
-                <Badge key={cat} variant="secondary">
-                  {cat === "ai-ml" ? "AI/ML" : cat}
+                <Badge key={cat} variant="secondary" className="capitalize">
+                  {cat === "ai-ml" ? "AI/ML" : cat === "open-source" ? "Open Source" : cat}
                 </Badge>
               ))}
               {project.isNDAProtected && <Badge variant="outline">NDA Protected</Badge>}

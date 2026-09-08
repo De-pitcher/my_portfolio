@@ -16,7 +16,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Badge className="mb-6 text-base py-2 px-4">Full-Stack Developer</Badge>
+            <Badge className="mb-6 text-base py-2 px-4">Senior Full-Stack & AI Systems Engineer</Badge>
           </motion.div>
 
           <motion.h1
@@ -41,10 +41,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Full-Stack Software Engineer specializing in{" "}
-            <span className="text-foreground font-semibold">Enterprise SaaS</span>,{" "}
-            <span className="text-foreground font-semibold">Cross-Platform Mobile Apps</span>, and{" "}
-            <span className="text-foreground font-semibold">IoT Integration</span>.
+            Full-Stack Software Engineer & Open-Source Contributor specializing in{" "}
+            <span className="text-foreground font-semibold">Autonomous AI Systems</span>,{" "}
+            <span className="text-foreground font-semibold">Enterprise SaaS</span>, and{" "}
+            <span className="text-foreground font-semibold">Cross-Platform Mobile</span>.
           </motion.p>
 
           <motion.div
