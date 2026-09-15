@@ -341,122 +341,6 @@ export const projects: Project[] = [
     order: 8,
   },
 
-  {
-    id: "andy",
-    slug: "andy",
-    title: "Andy - AI Voice Assistant for Android",
-    tagline: "Siri-Like Multimodal Voice Assistant in Flutter",
-    description:
-      "A fast, interactive voice assistant mobile application built with Flutter and Dart. Integrates OpenAI GPT-4 with real-time Speech-to-Text (STT) and Text-to-Speech (TTS) audio synthesis, providing natural spoken conversations on Android.",
-    category: ["mobile", "ai-ml"],
-    tags: ["Flutter", "Dart", "OpenAI GPT-4", "Speech-to-Text", "Text-to-Speech", "Mobile AI"],
-    thumbnail: "/projects/ai-dev-thumb.jpg",
-    images: [],
-    techStack: [
-      { name: "Flutter", category: "mobile", icon: "flutter" },
-      { name: "Dart", category: "mobile" },
-      { name: "OpenAI GPT-4", category: "other" },
-      { name: "Speech-to-Text", category: "mobile" },
-      { name: "Text-to-Speech", category: "mobile" },
-    ],
-    features: [
-      "Tap-to-talk voice recording and transcription",
-      "Real-time streaming conversation powered by OpenAI GPT-4",
-      "Natural voice synthesis audio output",
-      "Interactive chat history transcript interface",
-    ],
-    outcomes: [
-      "Sub-second voice turnaround for mobile queries",
-      "Hands-free voice assistant experience on Android devices",
-    ],
-    githubUrl: "https://github.com/De-pitcher/andy",
-    isFeatured: false,
-    isNDAProtected: false,
-    status: "In Testing",
-    order: 9,
-  },
-
-  {
-    id: "peregrine-compass",
-    slug: "peregrine-compass",
-    title: "Peregrine Compass - MongoDB BI LLM",
-    tagline: "Natural Language to MongoDB Query Generator",
-    description:
-      "Production-ready system for converting natural language queries to MongoDB aggregation pipelines using fine-tuned LLMs. Powered by Ollama for local-first AI without API dependencies.",
-    category: ["backend", "ai-ml"],
-    tags: ["Python", "Ollama", "MongoDB", "FastAPI", "LLM", "RAG", "Mistral"],
-    thumbnail: "/projects/compass-thumb.jpg",
-    images: ["/projects/compass-1.jpg"],
-    techStack: [
-      { name: "Python", category: "backend", icon: "python" },
-      { name: "FastAPI", category: "backend" },
-      { name: "Ollama", category: "other" },
-      { name: "MongoDB", category: "database" },
-      { name: "Mistral LLM", category: "other" },
-      { name: "RAG", category: "other" },
-      { name: "Docker", category: "devops" },
-    ],
-    features: [
-      "100% local AI processing (no cloud dependencies)",
-      "Fine-tuned LLMs for database queries",
-      "Natural language understanding",
-      "MongoDB aggregation pipeline generation",
-      "RAG (Retrieval-Augmented Generation) support",
-      "FastAPI REST endpoints",
-      "Docker containerization",
-      "Query execution and result streaming",
-    ],
-    outcomes: [
-      "Reduced query writing time by 80%",
-      "No API costs - 100% self-hosted",
-      "Production-ready error handling",
-      "Scalable to enterprise workloads",
-    ],
-    isFeatured: false,
-    isNDAProtected: true,
-    status: "Production",
-    order: 10,
-  },
-
-  {
-    id: "peregrine-ai",
-    slug: "peregrine-ai",
-    title: "Peregrine AI Dev CLI",
-    tagline: "Local-First AI Developer Assistant",
-    description:
-      "A production-grade CLI tool powered by Ollama for local AI-assisted development. Generate commit messages, documentation, and unit tests without API keys or cloud dependencies.",
-    category: ["backend", "ai-ml"],
-    tags: ["TypeScript", "Node.js", "Ollama", "CLI", "Conventional Commits", "Test Generation"],
-    thumbnail: "/projects/ai-dev-thumb.jpg",
-    images: ["/projects/ai-dev-1.jpg"],
-    techStack: [
-      { name: "TypeScript", category: "frontend", icon: "typescript" },
-      { name: "Node.js", category: "backend" },
-      { name: "Ollama", category: "other" },
-      { name: "Commander.js", category: "other" },
-      { name: "Git", category: "devops" },
-    ],
-    features: [
-      "100% local AI processing with Ollama",
-      "Generate conventional commit messages",
-      "Auto-generate code documentation",
-      "Unit test generation from code files",
-      "Real-time streaming responses",
-      "Zero configuration setup",
-      "Model selection and switching",
-      "Comprehensive error handling",
-    ],
-    outcomes: [
-      "Saves 15+ minutes per day on documentation",
-      "Ensures conventional commit format consistency",
-      "Reduces manual test writing by 70%",
-      "Free alternative to cloud AI services",
-    ],
-    isFeatured: false,
-    isNDAProtected: true,
-    status: "Production",
-    order: 11,
-  },
 
   {
     id: "pycatprint",
@@ -495,7 +379,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: false,
     status: "Open Source",
-    order: 8,
+    order: 9,
   },
 
   {
@@ -530,7 +414,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: false,
     status: "Open Source",
-    order: 9,
+    order: 10,
   },
 
   {
@@ -571,7 +455,7 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: false,
     status: "Open Source",
-    order: 13,
+    order: 11,
   },
 
   {
@@ -607,7 +491,7 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: true,
     status: "Production",
-    order: 14,
+    order: 12,
   },
 
   {
@@ -646,7 +530,7 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: true,
     status: "Production",
-    order: 15,
+    order: 13,
   },
 
   {
@@ -684,6 +568,6 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: true,
     status: "Production",
-    order: 16,
+    order: 14,
   },
 ];
