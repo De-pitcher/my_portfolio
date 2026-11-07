@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-11-07
+
+### Added - Production Showcase & Open-Source Engineering Expansion ✅
+
+#### Featured Open-Source Projects & Tooling
+- **Orchestrator-Supervisor-Reviewer (OSR)**:
+  - Multi-agent software engineering governance and anti-hallucination framework with CLI test gates.
+  - Snapshot diff verification, strict allowed_files scoping, and verifiable citation requirements.
+- **LibreDB Studio Core Contributions** (4 Upstream Merged PRs):
+  - In-browser self-hosted SQL IDE for PostgreSQL listed in official PostgreSQL catalogue.
+  - Engineered independent temperature and topP sampling for custom Anthropic Claude endpoints (PR #951).
+  - Authored comprehensive LibSQL provider capabilities documentation (PR #946).
+  - Multi-user / OIDC team workspace documentation signposts (PR #961) and Helm chart MFA doc resolution (PR #962).
+- **ScriptureLive**:
+  - Real-time native desktop church-media speech-to-scripture engine in Rust & Tauri.
+  - Local on-device transcription with `whisper.cpp`, 66-book reference parser, SQLite/FTS5 full Bible corpus retrieval, and borderless audience projection.
+- **UniPDF v1.0.0**:
+  - Zero-dependency statically compiled document engine in Rust.
+  - Added native DOCX and XLSX spreadsheet conversion, batch image-to-PDF compilation, watch mode, and automated GitHub Actions release CI/CD.
+- **PyCatPrint BLE Simulator**:
+  - BLE thermal printer CLI and virtual mock driver (`--mock`).
+  - Added visual PNG printout preview rendering, decompiled PD01 protocol with CRC8 polynomial 0x07 validation, and 24-test pytest suite.
+- **camera_service_plugin**:
+  - High-performance Flutter plugin for Android powered by CameraX with Base64 payload streaming and audio/video recording.
+
+### Changed - Quality Auditing & Clean Pruning ✅
+- Removed unfinished exploratory projects (Andy voice assistant, Peregrine Compass, Peregrine AI Dev CLI) to ensure only completed, high-impact software is showcased.
+- Audited open-source portfolio entries to strictly require merged upstream PR status (excluding unmerged contributions).
+- Re-indexed and balanced project display priority across Web, Mobile, Systems, Backend, and AI/ML categories.
+
 ## [0.8.0] - 2026-05-17
 
 ### Added - Phase 8: SEO & Performance Optimization ✅

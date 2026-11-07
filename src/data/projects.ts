@@ -43,6 +43,44 @@ export const projects: Project[] = [
   },
 
   {
+    id: "orchestrator-supervisor-reviewer",
+    slug: "orchestrator-supervisor-reviewer",
+    title: "Orchestrator-Supervisor-Reviewer (OSR)",
+    tagline: "Deterministic Multi-Agent Software Engineering Governance & Anti-Hallucination Framework",
+    description:
+      "A framework and Python CLI tool that lets any AI model act as the orchestrator, supervisor, and reviewer of a software project across any stack, while a deterministic script—not the AI's own say-so—verifies code against allowed files, assertion counts, test passes, and AST structural integrity.",
+    category: ["ai-ml", "backend", "open-source"],
+    tags: ["Python", "AI Agents", "Automated Evaluation", "CLI", "Governance", "CI/CD", "Quality Gates"],
+    thumbnail: "/projects/ai-dev-thumb.jpg",
+    images: ["/projects/ai-dev-1.jpg"],
+    techStack: [
+      { name: "Python 3.8+", category: "backend", icon: "python" },
+      { name: "GitHub Actions CI", category: "devops" },
+      { name: "Antigravity Hooks", category: "other" },
+      { name: "AST Verification", category: "other" },
+      { name: "Pytest", category: "other" },
+    ],
+    features: [
+      "Deterministic verification tool (osr verify) running real compiler, linter, and test suites",
+      "Strict allowed_files diff boundary snapshots preventing silent scope creep and code truncation",
+      "Anti-hallucination citation checks requiring AI code reviews to cite verifiable file:line code snippets",
+      "Assertion-count and skip-marker audit preventing agents from weakening test suites",
+      "Layered failure triage and work fingerprinting to invalidate stale approvals on post-review edits",
+      "Standard-library Python CLI implementation with zero third-party dependencies",
+    ],
+    outcomes: [
+      "100% mechanical gating where no unverified claims by AI models can pass without execution proof",
+      "Zero-dependency portable CLI with automated GitHub Actions CI/CD test suite",
+      "Eliminates silent regressions and fake PR approvals in autonomous coding loops",
+    ],
+    githubUrl: "https://github.com/De-pitcher/orchestrator-supervisor-reviewer",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 2,
+  },
+
+  {
     id: "novu-contributions",
     slug: "novu-contributions",
     title: "Novu Open-Source Core Contributions",
@@ -75,7 +113,44 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: false,
     status: "Open Source",
-    order: 2,
+    order: 3,
+  },
+
+  {
+    id: "libredb-contributions",
+    slug: "libredb-contributions",
+    title: "LibreDB Studio Open-Source Core Contributions",
+    tagline: "In-Browser SQL IDE for PostgreSQL & Modern Databases (4 Upstream Merged PRs)",
+    description:
+      "Core open-source contributor to LibreDB Studio (in-browser, self-hosted SQL IDE listed in the official PostgreSQL catalogue). Engineered independent temperature and topP sampling for custom Anthropic Claude endpoints, enhanced LibSQL provider capabilities, and signposted multi-user/OIDC workspace docs.",
+    category: ["backend", "ai-ml", "open-source"],
+    tags: ["TypeScript", "React", "PostgreSQL", "LibSQL", "Anthropic Claude", "Helm", "Open Source"],
+    thumbnail: "/projects/ems-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "TypeScript", category: "frontend", icon: "typescript" },
+      { name: "React", category: "frontend", icon: "react" },
+      { name: "PostgreSQL & LibSQL", category: "database", icon: "postgresql" },
+      { name: "Anthropic Claude API", category: "other" },
+      { name: "Helm & Docker", category: "devops" },
+    ],
+    features: [
+      "Engineered independent temperature and topP sampling for custom Claude AI model-tuning overlays (PR #951 merged upstream)",
+      "Authored comprehensive capabilities, error-handling, and usage documentation for the LibSQL provider (PR #946 merged upstream)",
+      "Implemented multi-user and team workspace signposts in storage and OIDC enterprise documentation (PR #961 merged upstream)",
+      "Resolved absolute URL reference resolution for MFA security docs in Helm charts (PR #962 merged upstream)",
+      "Maintained strict adherence to project's 84+ unit test suite and oxc linter verification",
+    ],
+    outcomes: [
+      "Directly merged into official LibreDB Studio repository powering self-hosted database teams",
+      "Fixed Claude endpoint 400 rejection errors for AI-assisted SQL query generation",
+      "Improved developer onboarding and provider extensibility for distributed SQLite/LibSQL databases",
+    ],
+    githubUrl: "https://github.com/libredb/libredb-studio/pull/951",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 4,
   },
 
   // 2. Production Enterprise & SaaS Systems
@@ -123,7 +198,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: true,
     status: "Production",
-    order: 3,
+    order: 5,
   },
 
   {
@@ -167,7 +242,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: true,
     status: "Production",
-    order: 4,
+    order: 6,
   },
 
   {
@@ -214,7 +289,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: true,
     status: "Production",
-    order: 5,
+    order: 7,
   },
 
   {
@@ -253,7 +328,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: true,
     status: "Production",
-    order: 6,
+    order: 8,
   },
 
   {
@@ -293,7 +368,119 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: false,
     status: "Open Source",
-    order: 7,
+    order: 9,
+  },
+
+  {
+    id: "scripturelive",
+    slug: "scripturelive",
+    title: "ScriptureLive - Real-Time Church Media Desktop Engine",
+    tagline: "Cross-Platform Native Desktop Speech-to-Scripture Engine with whisper.cpp & SQLite FTS5",
+    description:
+      "A high-performance native desktop application built with Rust and Tauri. Listens to live microphone/mixer audio, transcribes preaching locally via whisper.cpp, parses spoken Scripture references in real time, and renders dual-display audience outputs with SQLite/FTS5 text matching.",
+    category: ["systems", "ai-ml", "open-source"],
+    tags: ["Rust", "Tauri", "whisper.cpp", "SQLite", "FTS5", "Audio Processing", "Desktop App"],
+    thumbnail: "/projects/any2pdf-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "Rust", category: "backend", icon: "rust" },
+      { name: "Tauri", category: "frontend" },
+      { name: "whisper.cpp (whisper-rs)", category: "other" },
+      { name: "SQLite & FTS5", category: "database" },
+      { name: "CPAL Audio Engine", category: "other" },
+    ],
+    features: [
+      "Real-time 16 kHz mono microphone and audio mixer capture across Windows and macOS via CPAL",
+      "100% on-device speech transcription using whisper.cpp without cloud latency or subscription fees",
+      "Intelligent 66-book reference parser handling spoken ranges, spoken numbers, and phonetic ASR aliases",
+      "Local SQLite database with FTS5 full-corpus index covering all 31,102 verses of the Bible with instant retrieval",
+      "Independent, borderless secondary monitor projection window with auto, hold, and clear modes",
+    ],
+    outcomes: [
+      "Zero cloud API dependencies or latency during live services",
+      "Instant Scripture verse display triggered automatically from speaker's voice in sub-second time",
+      "Lightweight native footprint combining Rust execution safety with web UI responsiveness",
+    ],
+    githubUrl: "https://github.com/De-pitcher/scripturelive-mvp",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Active MVP",
+    order: 10,
+  },
+
+  {
+    id: "pycatprint",
+    slug: "pycatprint",
+    title: "PyCatPrint - BLE Thermal Printer Control & Simulator",
+    tagline: "Python CLI & Hardware-Less Simulator for BLE Thermal Printers",
+    description:
+      "A feature-rich Python CLI tool and hardware simulator for controlling BLE thermal cat printers (PD01, GT01, GB02, MX11). Converts images and multi-page PDFs into printer-compatible binary bitmaps with advanced dithering, hardware-less mock mode, and visual printout PNG rendering.",
+    category: ["backend", "iot", "open-source"],
+    tags: ["Python", "BLE", "Dithering", "Hardware Simulator", "CLI", "IoT", "Image Processing"],
+    thumbnail: "/projects/pycatprint-thumb.jpg",
+    images: ["/projects/pycatprint-1.jpg"],
+    techStack: [
+      { name: "Python 3.8+", category: "backend", icon: "python" },
+      { name: "Bleak (BLE)", category: "other" },
+      { name: "Pillow & NumPy", category: "other" },
+      { name: "pdf2image & pypdf", category: "other" },
+      { name: "Click", category: "other" },
+      { name: "pytest", category: "other" },
+    ],
+    features: [
+      "Hardware-Less Virtual Simulator (--mock) for offline testing and visual PNG preview generation",
+      "Reverse-engineered PD01 protocol extracted from Fun Print APK with CRC8 polynomial 0x07 validation",
+      "Advanced dithering algorithms (Floyd-Steinberg, Atkinson, Bayer 4x4 Halftone)",
+      "Multi-page PDF extraction with automatic blank-row page separators",
+      "Auto-discovery and connection retry logic for BLE cat printers (GT01, GB02, MX11, PD01)",
+      "Terminal ASCII & PNG printout rendering previews",
+      "24-test automated pytest suite covering protocol, dithering, mock driver, and CLI commands",
+    ],
+    outcomes: [
+      "Enables full offline hardware-less development and visual printout previewing",
+      "Reliable low-latency BLE packet transmission with MTU chunking",
+      "Complete open-source CLI suite with zero physical hardware dependencies",
+    ],
+    githubUrl: "https://github.com/De-pitcher/PyCatPrint",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 11,
+  },
+
+  {
+    id: "camera-service-plugin",
+    slug: "camera-service-plugin",
+    title: "camera_service_plugin - Android CameraX Flutter Plugin",
+    tagline: "High-Performance Android CameraX Plugin with Base64 & Audio/Video Recording",
+    description:
+      "A high-performance Flutter plugin for Android powered by CameraX. Features seamless image capture, video & audio recording with Base64 encoding and auto-permission handling.",
+    category: ["mobile", "open-source"],
+    tags: ["Flutter", "Android", "CameraX", "Dart", "Base64", "Plugin", "Java", "Open Source"],
+    thumbnail: "/projects/scale-mobile-thumb.jpg",
+    images: [],
+    techStack: [
+      { name: "Flutter", category: "mobile", icon: "flutter" },
+      { name: "Dart", category: "mobile" },
+      { name: "Android CameraX", category: "mobile" },
+      { name: "Java", category: "mobile" },
+      { name: "Base64 Encoding", category: "other" },
+    ],
+    features: [
+      "Seamless high-resolution image capture and video/audio recording",
+      "Automatic Base64 string encoding for direct cloud payload streaming",
+      "Native Android runtime permission handling (Camera, Microphone, Storage)",
+      "Built with modern Android CameraX APIs for high efficiency and device compatibility",
+    ],
+    outcomes: [
+      "Low-overhead native camera integration for Flutter applications",
+      "Published open-source Flutter plugin supporting high-fps camera workflows",
+    ],
+    githubUrl: "https://github.com/De-pitcher/camera_service_plugin",
+    isFeatured: true,
+    isNDAProtected: false,
+    status: "Open Source",
+    order: 12,
   },
 
   {
@@ -338,83 +525,7 @@ export const projects: Project[] = [
     isFeatured: true,
     isNDAProtected: false,
     status: "In Testing",
-    order: 8,
-  },
-
-
-  {
-    id: "pycatprint",
-    slug: "pycatprint",
-    title: "PyCatPrint - BLE Thermal Printer Control & Simulator",
-    tagline: "Python CLI & Hardware-Less Simulator for BLE Thermal Printers",
-    description:
-      "A feature-rich Python CLI tool and hardware simulator for controlling BLE thermal cat printers (PD01, GT01, GB02, MX11). Converts images and multi-page PDFs into printer-compatible binary bitmaps with advanced dithering, hardware-less mock mode, and visual printout PNG rendering.",
-    category: ["backend", "iot", "open-source"],
-    tags: ["Python", "BLE", "Dithering", "Hardware Simulator", "CLI", "IoT", "Image Processing"],
-    thumbnail: "/projects/pycatprint-thumb.jpg",
-    images: ["/projects/pycatprint-1.jpg"],
-    techStack: [
-      { name: "Python 3.8+", category: "backend", icon: "python" },
-      { name: "Bleak (BLE)", category: "other" },
-      { name: "Pillow & NumPy", category: "other" },
-      { name: "pdf2image & pypdf", category: "other" },
-      { name: "Click", category: "other" },
-      { name: "pytest", category: "other" },
-    ],
-    features: [
-      "Hardware-Less Virtual Simulator (--mock) for offline testing and visual PNG preview generation",
-      "Reverse-engineered PD01 protocol extracted from Fun Print APK with CRC8 polynomial 0x07 validation",
-      "Advanced dithering algorithms (Floyd-Steinberg, Atkinson, Bayer 4x4 Halftone)",
-      "Multi-page PDF extraction with automatic blank-row page separators",
-      "Auto-discovery and connection retry logic for BLE cat printers (GT01, GB02, MX11, PD01)",
-      "Terminal ASCII & PNG printout rendering previews",
-      "24-test automated pytest suite covering protocol, dithering, mock driver, and CLI commands",
-    ],
-    outcomes: [
-      "Enables full offline hardware-less development and visual printout previewing",
-      "Reliable low-latency BLE packet transmission with MTU chunking",
-      "Complete open-source CLI suite with zero physical hardware dependencies",
-    ],
-    githubUrl: "https://github.com/De-pitcher/PyCatPrint",
-    isFeatured: true,
-    isNDAProtected: false,
-    status: "Open Source",
-    order: 9,
-  },
-
-  {
-    id: "camera-service-plugin",
-    slug: "camera-service-plugin",
-    title: "camera_service_plugin - Android CameraX Flutter Plugin",
-    tagline: "High-Performance Android CameraX Plugin with Base64 & Audio/Video Recording",
-    description:
-      "A high-performance Flutter plugin for Android powered by CameraX. Features seamless image capture, video & audio recording with Base64 encoding and auto-permission handling.",
-    category: ["mobile", "open-source"],
-    tags: ["Flutter", "Android", "CameraX", "Dart", "Base64", "Plugin", "Java", "Open Source"],
-    thumbnail: "/projects/scale-mobile-thumb.jpg",
-    images: [],
-    techStack: [
-      { name: "Flutter", category: "mobile", icon: "flutter" },
-      { name: "Dart", category: "mobile" },
-      { name: "Android CameraX", category: "mobile" },
-      { name: "Java", category: "mobile" },
-      { name: "Base64 Encoding", category: "other" },
-    ],
-    features: [
-      "Seamless high-resolution image capture and video/audio recording",
-      "Automatic Base64 string encoding for direct cloud payload streaming",
-      "Native Android runtime permission handling (Camera, Microphone, Storage)",
-      "Built with modern Android CameraX APIs for high efficiency and device compatibility",
-    ],
-    outcomes: [
-      "Low-overhead native camera integration for Flutter applications",
-      "Published open-source Flutter plugin supporting high-fps camera workflows",
-    ],
-    githubUrl: "https://github.com/De-pitcher/camera_service_plugin",
-    isFeatured: true,
-    isNDAProtected: false,
-    status: "Open Source",
-    order: 10,
+    order: 13,
   },
 
   {
@@ -455,7 +566,7 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: false,
     status: "Open Source",
-    order: 11,
+    order: 14,
   },
 
   {
@@ -491,7 +602,7 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: true,
     status: "Production",
-    order: 12,
+    order: 15,
   },
 
   {
@@ -530,7 +641,7 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: true,
     status: "Production",
-    order: 13,
+    order: 16,
   },
 
   {
@@ -568,6 +679,6 @@ export const projects: Project[] = [
     isFeatured: false,
     isNDAProtected: true,
     status: "Production",
-    order: 14,
+    order: 17,
   },
 ];
